@@ -1,0 +1,36 @@
+@import "tailwindcss";
+
+:root {
+  --background: #f9f7f3;
+  --foreground: #1f2428;
+  --pekesen-cream: #f9f7f3;
+  --pekesen-charcoal: #1b1d20;
+  --pekesen-gold: #c8a46a;
+  --pekesen-sand: #efe2d0;
+  --pekesen-cloud: #ffffff;
+}
+
+@theme inline {
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --font-sans: var(--font-manrope);
+  --font-heading: var(--font-playfair);
+}
+
+body {
+  background: radial-gradient(circle at top, #fdfbf8 0%, var(--pekesen-cream) 45%, #f3eee7 100%);
+  color: var(--foreground);
+  min-height: 100vh;
+}
+
+.section-heading {
+  font-family: var(--font-playfair);
+}
+
+.card-shadow {
+  box-shadow: 0 20px 60px rgba(0, 0, 0, 0.08);
+}
+
+.gradient-border {
+  border-image: linear-gradient(135deg, var(--pekesen-gold), #f9d9ac) 1;
+}
