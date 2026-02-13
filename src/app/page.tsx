@@ -1,3 +1,4 @@
+import Image from "next/image";
 import Link from "next/link";
 
 const hours = [
@@ -27,13 +28,60 @@ const highlights = [
   },
 ];
 
+const heroImage = {
+  src: "/images/hero-salon.jpg",
+  alt: "Stylistin arbeitet an einem Kunden in einem modernen Salon",
+  credit: "Ashishlohorung",
+  creditUrl: "https://commons.wikimedia.org/wiki/User:Ashishlohorung",
+  license: "CC BY-SA 3.0",
+  licenseUrl: "https://creativecommons.org/licenses/by-sa/3.0/",
+};
+
+const galleryImages = [
+  {
+    src: "/images/salon-exterior.jpg",
+    alt: "Salonfassade mit goldenen Akzenten",
+    caption: "Unser Salon mitten in Bad Homburg lädt zum spontanen Besuch ein.",
+    credit: "Vuong Tri Binh",
+    creditUrl: "https://commons.wikimedia.org/wiki/User:Vuong_Tri_Binh",
+    license: "CC BY-SA 4.0",
+    licenseUrl: "https://creativecommons.org/licenses/by-sa/4.0/",
+  },
+  {
+    src: "/images/hero-salon.jpg",
+    alt: "Stylistin bei der Arbeit",
+    caption: "Typberatung und präzise Schnitte – individuell abgestimmt auf Ihren Stil.",
+    credit: "Ashishlohorung",
+    creditUrl: "https://commons.wikimedia.org/wiki/User:Ashishlohorung",
+    license: "CC BY-SA 3.0",
+    licenseUrl: "https://creativecommons.org/licenses/by-sa/3.0/",
+  },
+  {
+    src: "/images/salon-bw.jpg",
+    alt: "Schwarz-weiß Aufnahme eines klassischen Salons",
+    caption: "Handwerkliche Tradition trifft moderne Techniken und Produkte.",
+    credit: "Peachyeung316",
+    creditUrl: "https://commons.wikimedia.org/wiki/User:Peachyeung316",
+    license: "CC BY-SA 4.0",
+    licenseUrl: "https://creativecommons.org/licenses/by-sa/4.0/",
+  },
+];
+
 export default function Home() {
   return (
     <div className="pb-16">
       <header className="mx-auto mt-8 max-w-6xl px-6">
         <section className="relative overflow-hidden rounded-[32px] bg-[#1c1f24] text-white">
-          <div className="absolute inset-0 opacity-20" aria-hidden>
-            <div className="h-full w-full bg-[radial-gradient(circle_at_top,_rgba(255,255,255,0.35),_transparent_55%)]" />
+          <div className="absolute inset-0" aria-hidden>
+            <Image
+              src={heroImage.src}
+              alt=""
+              fill
+              priority
+              sizes="100vw"
+              className="object-cover"
+            />
+            <div className="absolute inset-0 bg-[#101215]/80" />
           </div>
           <div className="relative grid gap-10 px-8 py-14 lg:grid-cols-[1.1fr_0.9fr] lg:px-14">
             <div>
@@ -43,7 +91,7 @@ export default function Home() {
               <h1 className="section-heading mt-4 text-4xl leading-tight text-white sm:text-5xl">
                 Ihr exklusiver Friseur im Herzen von Bad Homburg
               </h1>
-              <p className="mt-6 max-w-2xl text-lg text-slate-200">
+              <p className="mt-6 max-w-2xl text-lg text-slate-100">
                 Wir verbinden präzise Schnitte, charakterstarke Colorationen und
                 aufmerksamste Gastfreundschaft. Kommen Sie spontan vorbei – oder
                 reservieren Sie Ihren Lieblingsstylisten telefonisch.
@@ -94,6 +142,13 @@ export default function Home() {
               </div>
             </div>
           </div>
+          <p className="relative px-8 pb-6 text-xs text-white/70 lg:px-14">
+            Foto: <Link className="underline" href={heroImage.creditUrl} target="_blank" rel="noreferrer">{heroImage.credit}</Link> ({" "}
+            <Link className="underline" href={heroImage.licenseUrl} target="_blank" rel="noreferrer">
+              {heroImage.license}
+            </Link>
+            )
+          </p>
         </section>
       </header>
 
@@ -158,6 +213,58 @@ export default function Home() {
             >
               Folgen Sie uns auf Instagram
             </Link>
+          </div>
+        </section>
+
+        <section className="rounded-[32px] border border-[#efe2d0] bg-white p-10">
+          <div className="flex flex-col gap-6 md:flex-row md:items-end md:justify-between">
+            <div>
+              <p className="text-sm uppercase tracking-[0.3em] text-[#a57c48]">
+                Impressionen
+              </p>
+              <h2 className="section-heading mt-4 text-3xl text-[#1c1f24]">
+                Atmosphäre, die inspiriert
+              </h2>
+              <p className="mt-4 max-w-3xl text-lg text-slate-700">
+                Von der großzügigen Empfangszone bis zu unseren Styling-Plätzen – diese Eindrücke
+                vermitteln, wie persönlich und hochwertig Ihr Besuch bei uns wird.
+              </p>
+            </div>
+          </div>
+          <div className="mt-10 grid gap-6 md:grid-cols-2 lg:grid-cols-3">
+            {galleryImages.map((image) => (
+              <figure
+                key={image.src}
+                className="group overflow-hidden rounded-[28px] border border-[#efe2d0] bg-white"
+              >
+                <div className="relative h-64 w-full">
+                  <Image
+                    src={image.src}
+                    alt={image.alt}
+                    fill
+                    sizes="(min-width: 1024px) 33vw, (min-width: 768px) 50vw, 100vw"
+                    className="object-cover transition duration-500 group-hover:scale-105"
+                  />
+                </div>
+                <figcaption className="space-y-2 p-6 text-sm text-slate-700">
+                  <p className="text-base text-[#1c1f24]">{image.caption}</p>
+                  <p className="text-xs text-slate-500">
+                    Foto: {" "}
+                    <Link
+                      href={image.creditUrl}
+                      target="_blank"
+                      className="underline"
+                      rel="noreferrer"
+                    >
+                      {image.credit}
+                    </Link>{" "}
+                    (<Link href={image.licenseUrl} target="_blank" className="underline" rel="noreferrer">
+                      {image.license}
+                    </Link>)
+                  </p>
+                </figcaption>
+              </figure>
+            ))}
           </div>
         </section>
 
