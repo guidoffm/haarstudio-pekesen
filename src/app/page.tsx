@@ -323,7 +323,7 @@ export default function Home() {
                   Mitten in der Fußgängerzone – ideal erreichbar, mit Parkmöglichkeiten und direkter Nähe zu Cafés und Boutiquen.
                 </p>
                 <Link
-                  href="https://maps.app.goo.gl/?q=Louisenstra%C3%9Fe+19,+61348+Bad+Homburg"
+                  href="https://www.google.com/maps/search/?api=1&query=Louisenstraße+19,+61348+Bad+Homburg"
                   className="mt-6 inline-flex items-center gap-2 text-sm font-semibold text-[#1c1f24] underline decoration-[#c8a46a] decoration-2 underline-offset-4"
                   target="_blank"
                 >
