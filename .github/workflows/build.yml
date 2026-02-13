@@ -23,6 +23,34 @@ jobs:
     steps:
       - name: Checkout repository
         uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - name: Set up Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: 20
+
+      - name: Configure Git user
+        if: github.event_name == 'push' && github.ref == 'refs/heads/main'
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+
+      - name: Determine version
+        id: version
+        run: |
+          set -euo pipefail
+          if [[ "${GITHUB_EVENT_NAME}" == "push" && "${GITHUB_REF}" == "refs/heads/main" ]]; then
+            npm version minor -m "chore: release %s"
+            VERSION=$(node -p "require('./package.json').version")
+            git push origin HEAD
+            git push origin "v${VERSION}"
+          else
+            VERSION="$(node -p "require('./package.json').version")-preview-${GITHUB_SHA::7}"
+          fi
+          echo "version=${VERSION}" >> $GITHUB_OUTPUT
+          echo "VERSION=${VERSION}" >> $GITHUB_ENV
 
       - name: Install cosign
         if: github.event_name != 'pull_request'
@@ -53,7 +81,9 @@ jobs:
         with:
           context: .
           push: ${{ github.event_name != 'pull_request' }}
-          tags: ${{ steps.meta.outputs.tags }}
+          tags: |
+            ${{ env.REGISTRY }}/${{ env.IMAGE_NAME }}:${{ env.VERSION }}
+            ${{ env.REGISTRY }}/${{ env.IMAGE_NAME }}:latest
           labels: ${{ steps.meta.outputs.labels }}
           cache-from: type=gha
           cache-to: type=gha,mode=max
@@ -62,6 +92,6 @@ jobs:
       - name: Sign the published Docker image
         if: github.event_name != 'pull_request'
         env:
-          TAGS: ${{ steps.meta.outputs.tags }}
+          TAGS: ${{ env.REGISTRY }}/${{ env.IMAGE_NAME }}:${{ env.VERSION }}
           DIGEST: ${{ steps.build-and-push.outputs.digest }}
         run: echo "${TAGS}" | xargs -I {} cosign sign --yes {}@${DIGEST}
