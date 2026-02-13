@@ -21,6 +21,7 @@ export const metadata: Metadata = {
     "Haarstudio Pekesen",
     "Friseur Bad Homburg",
     "Ali Pekesen",
+    "Zeynel Pekesen",
     "Friseursalon Louisenstraße",
     "ohne Termin",
   ],

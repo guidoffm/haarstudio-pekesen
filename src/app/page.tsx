@@ -19,7 +19,7 @@ const highlights = [
   {
     title: "Persönlicher Service",
     copy:
-      "Unter der Leitung von Ali Pekesen erwartet Sie echte Handwerkskunst und ehrliche Empfehlungen.",
+      "Unter der Leitung von Ali & Zeynel Pekesen erwartet Sie echte Handwerkskunst und ehrliche Empfehlungen.",
   },
   {
     title: "Lange Öffnungszeiten",
@@ -170,11 +170,11 @@ export default function Home() {
               Über uns
             </p>
             <h2 className="section-heading mt-4 text-3xl text-[#1c1f24]">
-              Handwerk mit Handschlagqualität – geführt von Ali Pekesen
+              Handwerk mit Handschlagqualität – geführt von Ali & Zeynel Pekesen
             </h2>
             <p className="mt-6 text-lg text-slate-800">
               Das Haarstudio Pekesen ist ein Familienbetrieb mit modernem Anspruch.
-              Ali Pekesen und sein Team nehmen sich Zeit, um Ihren Stil zu verstehen,
+              Ali & Zeynel Pekesen und ihr Team nehmen sich Zeit, um Ihren Stil zu verstehen,
               empfehlen nur, was wirklich zu Ihnen passt, und arbeiten mit exklusiven Produkten.
             </p>
             <p className="mt-4 text-lg text-slate-800">
@@ -328,7 +328,7 @@ export default function Home() {
 
       <footer className="mx-auto mt-16 w-full max-w-6xl px-6">
         <div className="rounded-[32px] border border-[#efe2d0] bg-white p-8 text-sm text-slate-600">
-          <p className="font-semibold text-[#1c1f24]">Haarstudio Pekesen · Inhaber Ali Pekesen</p>
+          <p className="font-semibold text-[#1c1f24]">Haarstudio Pekesen · Inhaber Ali & Zeynel Pekesen</p>
           <p className="mt-2">
             Louisenstraße 19 · 61348 Bad Homburg v. d. Höhe · Telefon 06172 681466 · kontakt@haarstudio-pekesen.de
           </p>
