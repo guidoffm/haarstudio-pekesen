@@ -7,7 +7,7 @@ const hours = [
   { day: "Mittwoch", time: "08:00 - 19:30" },
   { day: "Donnerstag", time: "08:00 - 19:30" },
   { day: "Freitag", time: "08:00 - 19:30" },
-  { day: "Samstag", time: "09:00 - 18:00" },
+  { day: "Samstag", time: "08:00 - 18:00" },
 ];
 
 const highlights = [
@@ -19,7 +19,7 @@ const highlights = [
   {
     title: "Persönlicher Service",
     copy:
-      "Unter der Leitung von Ali & Zeynel Pekesen erwartet Sie echte Handwerkskunst und ehrliche Empfehlungen.",
+      "Unter der Leitung von Ali Pekesen erwartet Sie echte Handwerkskunst und ehrliche Empfehlungen.",
   },
   {
     title: "Lange Öffnungszeiten",
@@ -39,40 +39,19 @@ const heroImage = {
 
 const galleryImages = [
   {
-    src: "/images/ornaw-barbershop-4019683_1280.jpg",
-    alt: "Heller Barbershop mit klassischen Ledersesseln",
-    caption: "Komfortable Styling-Plätze und viel Raum für entspannte Beratung.",
-    credit: "Pixabay / ornaw",
-    creditUrl: "https://pixabay.com/photos/barbershop-salon-chairs-barbers-4019683/",
-    license: "Pixabay License",
-    licenseUrl: "https://pixabay.com/service/license-summary/",
+    src: "/images/1B993822-9FB4-4829-B9F7-1F06B06CFE1B_1_105_c.jpeg",
+    alt: "Fassade des Haarstudio Pekesen in der Louisenstraße, Bad Homburg – Frontalansicht mit großem Leuchtschild",
+    caption: "Unser Salon mitten in der Fußgängerzone – gut sichtbar, leicht zu finden.",
   },
   {
-    src: "/images/juanromanroman-hairdressing-952007_1280.jpg",
-    alt: "Friseurin, die konzentriert einem Kunden die Haare schneidet",
-    caption: "Schnitte mit Feingefühl – ganz nach Ihrem Stil.",
-    credit: "Pixabay / juanromanroman",
-    creditUrl: "https://pixabay.com/photos/hairdressing-salon-hairdresser-952007/",
-    license: "Pixabay License",
-    licenseUrl: "https://pixabay.com/service/license-summary/",
+    src: "/images/BD62660A-9384-4052-925D-9EFD05F6A681_1_105_c.jpeg",
+    alt: "Außenansicht des Haarstudio Pekesen mit Schaufenstern und Eingang",
+    caption: "Moderne Schaufenster laden zum Vorbeikommen ein – kein Termin nötig.",
   },
   {
-    src: "/images/mostafa_meraji-barber-6818730_1280.jpg",
-    alt: "Barbier stylt den Bart eines Kunden",
-    caption: "Präzise Bart- und Pflegearbeit für ein gepflegtes Erscheinungsbild.",
-    credit: "Pixabay / mostafa_meraji",
-    creditUrl: "https://pixabay.com/photos/barber-barbershop-salon-hairdresser-6818730/",
-    license: "Pixabay License",
-    licenseUrl: "https://pixabay.com/service/license-summary/",
-  },
-  {
-    src: "/images/pexels-awning-1840339_1280.jpg",
-    alt: "Salonfassade mit großer Markise",
-    caption: "Unser Team begrüßt Sie herzlich – spontan oder mit Termin.",
-    credit: "Pixabay / pexels",
-    creditUrl: "https://pixabay.com/photos/awning-shop-stores-signboard-1840339/",
-    license: "Pixabay License",
-    licenseUrl: "https://pixabay.com/service/license-summary/",
+    src: "/images/E6F74B7D-87F0-458C-827E-8052B61D100D_1_105_c.jpeg",
+    alt: "Seitenansicht des Haarstudio Pekesen mit Blick in die historische Fußgängerzone Bad Homburg",
+    caption: "Direkt in der historischen Innenstadt – umgeben von Cafés und Boutiquen.",
   },
 ];
 
@@ -255,22 +234,8 @@ export default function Home() {
                     className="object-cover transition duration-500 group-hover:scale-105"
                   />
                 </div>
-                <figcaption className="space-y-2 p-6 text-sm text-slate-700">
+                <figcaption className="p-6 text-sm text-slate-700">
                   <p className="text-base text-[#1c1f24]">{image.caption}</p>
-                  <p className="text-xs text-slate-500">
-                    Foto: {" "}
-                    <Link
-                      href={image.creditUrl}
-                      target="_blank"
-                      className="underline"
-                      rel="noreferrer"
-                    >
-                      {image.credit}
-                    </Link>{" "}
-                    (<Link href={image.licenseUrl} target="_blank" className="underline" rel="noreferrer">
-                      {image.license}
-                    </Link>)
-                  </p>
                 </figcaption>
               </figure>
             ))}
@@ -337,7 +302,7 @@ export default function Home() {
 
       <footer className="mx-auto mt-16 w-full max-w-6xl px-6">
         <div className="rounded-[32px] border border-[#efe2d0] bg-white p-8 text-sm text-slate-600">
-          <p className="font-semibold text-[#1c1f24]">Haarstudio Pekesen · Inhaber Ali & Zeynel Pekesen</p>
+          <p className="font-semibold text-[#1c1f24]">Haarstudio Pekesen · Inhaber Ali Pekesen</p>
           <p className="mt-2">
             Louisenstraße 19 · 61348 Bad Homburg v. d. Höhe · Telefon 06172 681466 · kontakt@haarstudio-pekesen.de
           </p>
