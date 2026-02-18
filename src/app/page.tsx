@@ -2,11 +2,11 @@ import Image from "next/image";
 import Link from "next/link";
 
 const hours = [
-  { day: "Montag", time: "08:00 - 19:30" },
-  { day: "Dienstag", time: "08:00 - 19:30" },
-  { day: "Mittwoch", time: "08:00 - 19:30" },
-  { day: "Donnerstag", time: "08:00 - 19:30" },
-  { day: "Freitag", time: "08:00 - 19:30" },
+  { day: "Montag", time: "08:00 - 19:00" },
+  { day: "Dienstag", time: "08:00 - 19:00" },
+  { day: "Mittwoch", time: "08:00 - 19:00" },
+  { day: "Donnerstag", time: "08:00 - 19:00" },
+  { day: "Freitag", time: "08:00 - 19:00" },
   { day: "Samstag", time: "08:00 - 18:00" },
 ];
 
