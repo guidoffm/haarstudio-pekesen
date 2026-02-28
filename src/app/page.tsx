@@ -24,7 +24,7 @@ const highlights = [
   {
     title: "Lange Öffnungszeiten",
     copy:
-      "Montag bis Freitag bis 19:30 Uhr – perfekt für alle, die sich nach der Arbeit Zeit für sich nehmen möchten.",
+      "Montag bis Freitag bis 19:00 Uhr – perfekt für alle, die sich nach der Arbeit Zeit für sich nehmen möchten.",
   },
 ];
 
