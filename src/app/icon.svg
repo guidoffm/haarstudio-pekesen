@@ -1,0 +1,22 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64">
+  <defs>
+    <linearGradient id="g" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#b8860b"/>
+      <stop offset="100%" stop-color="#daa520"/>
+    </linearGradient>
+  </defs>
+  <circle cx="32" cy="32" r="30" fill="#1a1a2e"/>
+  <!-- Scissors -->
+  <g transform="translate(32,32) rotate(-30)">
+    <!-- Left blade -->
+    <ellipse cx="-4" cy="-14" rx="4.5" ry="12" fill="none" stroke="url(#g)" stroke-width="2.5"/>
+    <!-- Right blade -->
+    <ellipse cx="4" cy="-14" rx="4.5" ry="12" fill="none" stroke="url(#g)" stroke-width="2.5"/>
+    <!-- Left handle -->
+    <ellipse cx="-6" cy="10" rx="6" ry="7" fill="none" stroke="url(#g)" stroke-width="2.5"/>
+    <!-- Right handle -->
+    <ellipse cx="6" cy="10" rx="6" ry="7" fill="none" stroke="url(#g)" stroke-width="2.5"/>
+    <!-- Pivot -->
+    <circle cx="0" cy="0" r="3" fill="url(#g)"/>
+  </g>
+</svg>
