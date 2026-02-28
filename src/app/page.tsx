@@ -158,11 +158,11 @@ export default function Home() {
               Über uns
             </p>
             <h2 className="section-heading mt-4 text-3xl text-[#1c1f24]">
-              Handwerk mit Handschlagqualität – geführt von Ali & Zeynel Pekesen
+              Handwerk mit Handschlagqualität – geführt von Ali Pekesen
             </h2>
             <p className="mt-6 text-lg text-slate-800">
               Das Haarstudio Pekesen ist ein Familienbetrieb mit modernem Anspruch.
-              Ali & Zeynel Pekesen und ihr Team nehmen sich Zeit, um Ihren Stil zu verstehen,
+              Ali Pekesen und sein Team nehmen sich Zeit, um Ihren Stil zu verstehen,
               empfehlen nur, was wirklich zu Ihnen passt, und arbeiten mit exklusiven Produkten.
             </p>
             <p className="mt-4 text-lg text-slate-800">
@@ -252,7 +252,7 @@ export default function Home() {
                 Immer für Sie da – auch nach Feierabend
               </h2>
               <p className="mt-4 text-lg text-slate-700">
-                Montag bis Freitag sind wir bis 19:30 Uhr für Sie da. Starten Sie entspannt in den Abend – wir kümmern uns um den perfekten Look.
+                Montag bis Freitag sind wir bis 19:00 Uhr für Sie da. Starten Sie entspannt in den Abend – wir kümmern uns um den perfekten Look.
               </p>
               <ul className="mt-6 space-y-3">
                 {hours.map((hour) => (
