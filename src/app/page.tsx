@@ -314,32 +314,46 @@ export default function Home() {
           <div className="mt-10 grid gap-8 lg:grid-cols-2">
             <div>
               <h3 className="text-xl font-semibold text-[#1c1f24]">Herren</h3>
-              <ul className="mt-4 space-y-2">
-                {herrenPreise.map((item) => (
-                  <li
-                    key={item.service}
-                    className="flex items-baseline justify-between gap-4 rounded-2xl bg-[#f9f5f0] px-5 py-3 text-[#1c1f24]"
-                  >
-                    <span>{item.service}</span>
-                    <span className="shrink-0 font-semibold">{item.price}</span>
-                  </li>
-                ))}
-              </ul>
+              <div className="mt-4 overflow-x-auto">
+                <table className="w-full text-left text-[#1c1f24]">
+                  <thead>
+                    <tr className="text-sm uppercase tracking-wider text-[#a57c48]">
+                      <th className="pb-3 pr-4 font-medium">Leistung</th>
+                      <th className="pb-3 text-right font-medium">Preis</th>
+                    </tr>
+                  </thead>
+                  <tbody className="text-base">
+                    {herrenPreise.map((item) => (
+                      <tr key={item.service} className="border-t border-[#efe2d0]">
+                        <td className="py-3 pr-4">{item.service}</td>
+                        <td className="py-3 text-right font-semibold">{item.price}</td>
+                      </tr>
+                    ))}
+                  </tbody>
+                </table>
+              </div>
             </div>
 
             <div>
               <h3 className="text-xl font-semibold text-[#1c1f24]">Kosmetik</h3>
-              <ul className="mt-4 space-y-2">
-                {kosmetikPreise.map((item) => (
-                  <li
-                    key={item.service}
-                    className="flex items-baseline justify-between gap-4 rounded-2xl bg-[#f9f5f0] px-5 py-3 text-[#1c1f24]"
-                  >
-                    <span>{item.service}</span>
-                    <span className="shrink-0 font-semibold">{item.price}</span>
-                  </li>
-                ))}
-              </ul>
+              <div className="mt-4 overflow-x-auto">
+                <table className="w-full text-left text-[#1c1f24]">
+                  <thead>
+                    <tr className="text-sm uppercase tracking-wider text-[#a57c48]">
+                      <th className="pb-3 pr-4 font-medium">Leistung</th>
+                      <th className="pb-3 text-right font-medium">Preis</th>
+                    </tr>
+                  </thead>
+                  <tbody className="text-base">
+                    {kosmetikPreise.map((item) => (
+                      <tr key={item.service} className="border-t border-[#efe2d0]">
+                        <td className="py-3 pr-4">{item.service}</td>
+                        <td className="py-3 text-right font-semibold">{item.price}</td>
+                      </tr>
+                    ))}
+                  </tbody>
+                </table>
+              </div>
             </div>
           </div>
 
