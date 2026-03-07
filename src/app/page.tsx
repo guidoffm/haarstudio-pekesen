@@ -28,6 +28,37 @@ const highlights = [
   },
 ];
 
+const herrenPreise = [
+  { service: "Maschinenschnitt mit Föhnen (nur mit 1 Aufsatz)", price: "15,00 €" },
+  { service: "Schneiden und Föhnen (mit Schere und Maschine)", price: "17,00 €" },
+  { service: "Bartrasur (nass)", price: "ab 12,00 €" },
+  { service: "Anrasieren mit Maschine", price: "7,00 €" },
+  { service: "Farbe", price: "ab 25,00 €" },
+  { service: "Kinder (bis 10 Jahre)", price: "15,00 €" },
+];
+
+const damenPreise = [
+  { service: "Schneiden", kurz: "ab 22,00 €", lang: "ab 25,00 €" },
+  { service: "Föhnen", kurz: "ab 22,00 €", lang: "ab 25,00 €" },
+  { service: "Einlegen", kurz: "ab 22,00 €", lang: "ab 25,00 €" },
+  { service: "Neutönung mit Modelönung", kurz: "ab 40,00 €", lang: "ab 45,00 €" },
+  { service: "Färben (Ansatz)", kurz: "ab 40,00 €", lang: "ab 45,00 €" },
+  { service: "Färben (komplett)", kurz: "ab 55,00 €", lang: "ab 60,00 €" },
+  { service: "Dauerwelle", kurz: "ab 60,00 €", lang: "ab 65,00 €" },
+  { service: "Foliensträhnen (ab 11 Stück)", kurz: "pro Folie ab 1,50 €", lang: "pro Folie ab 1,50 €" },
+  { service: "Brautfrisur", kurz: "170,00 €", lang: "170,00 €" },
+  { service: "Haarverlängerung (ab 11 Stück)", kurz: "auf Anfrage", lang: "auf Anfrage" },
+  { service: "Haarverdichtung (ab 11 Stück)", kurz: "auf Anfrage", lang: "auf Anfrage" },
+];
+
+const kosmetikPreise = [
+  { service: "Wimpern färben", price: "10,00 €" },
+  { service: "Augenbrauen färben", price: "8,00 €" },
+  { service: "Orientalische Gesichtshaarentfernung", price: "ab 18,00 €" },
+  { service: "Augenbrauen zupfen", price: "8,00 €" },
+  { service: "Oberlippe", price: "5,00 €" },
+];
+
 const heroImage = {
   src: "/images/salon-styling-bereich.jpeg",
   alt: "Styling-Bereich des Haarstudio Pekesen mit modernen Hexagon-Deckenleuchten und Friseursesseln",
@@ -84,10 +115,15 @@ export default function Home() {
           </div>
           <div className="relative grid gap-10 px-8 py-14 lg:grid-cols-[1.1fr_0.9fr] lg:px-14">
             <div>
-              <p className="text-sm uppercase tracking-[0.3em] text-[#f5d9b3]">
-                Haarstudio Pekesen · Bad Homburg
-              </p>
-              <h1 className="section-heading mt-4 text-4xl leading-tight text-white sm:text-5xl">
+              <Image
+                src="/images/logo-white.svg"
+                alt="Logo Haarstudio Pekesen"
+                width={280}
+                height={140}
+                className="mb-6"
+                priority
+              />
+              <h1 className="section-heading text-4xl leading-tight text-white sm:text-5xl">
                 Ihr exklusiver Friseur im Herzen von Bad Homburg
               </h1>
               <p className="mt-6 max-w-2xl text-lg text-slate-100">
@@ -101,6 +137,12 @@ export default function Home() {
                   className="inline-flex items-center justify-center rounded-full bg-[#c8a46a] px-8 py-3 text-base font-semibold text-[#1c1f24] transition hover:bg-[#d4b37d]"
                 >
                   Jetzt anrufen
+                </Link>
+                <Link
+                  href="#preise"
+                  className="inline-flex items-center justify-center rounded-full border border-white/30 px-8 py-3 text-base font-semibold text-white transition hover:border-white hover:bg-white/10"
+                >
+                  Preise
                 </Link>
                 <Link
                   href="#kontakt"
@@ -246,6 +288,86 @@ export default function Home() {
           </div>
         </section>
 
+        <section id="preise" className="rounded-[32px] border border-[#efe2d0] bg-white p-10">
+          <div className="flex flex-col gap-6 md:flex-row md:items-end md:justify-between">
+            <div>
+              <p className="text-sm uppercase tracking-[0.3em] text-[#a57c48]">
+                Preise
+              </p>
+              <h2 className="section-heading mt-4 text-3xl text-[#1c1f24]">
+                Unsere Preisliste
+              </h2>
+              <p className="mt-4 max-w-3xl text-lg text-slate-700">
+                Transparente Preise für alle Leistungen – von Schnitt und Farbe bis Kosmetik.
+                Stand: Juni 2025.
+              </p>
+            </div>
+            <Link
+              href="/images/preisliste.pdf"
+              target="_blank"
+              className="inline-flex shrink-0 items-center justify-center rounded-full bg-[#1c1f24] px-6 py-3 text-sm font-semibold text-white transition hover:bg-black"
+            >
+              Preisliste als PDF
+            </Link>
+          </div>
+
+          <div className="mt-10 grid gap-8 lg:grid-cols-2">
+            <div>
+              <h3 className="text-xl font-semibold text-[#1c1f24]">Herren</h3>
+              <ul className="mt-4 space-y-2">
+                {herrenPreise.map((item) => (
+                  <li
+                    key={item.service}
+                    className="flex items-baseline justify-between gap-4 rounded-2xl bg-[#f9f5f0] px-5 py-3 text-[#1c1f24]"
+                  >
+                    <span>{item.service}</span>
+                    <span className="shrink-0 font-semibold">{item.price}</span>
+                  </li>
+                ))}
+              </ul>
+            </div>
+
+            <div>
+              <h3 className="text-xl font-semibold text-[#1c1f24]">Kosmetik</h3>
+              <ul className="mt-4 space-y-2">
+                {kosmetikPreise.map((item) => (
+                  <li
+                    key={item.service}
+                    className="flex items-baseline justify-between gap-4 rounded-2xl bg-[#f9f5f0] px-5 py-3 text-[#1c1f24]"
+                  >
+                    <span>{item.service}</span>
+                    <span className="shrink-0 font-semibold">{item.price}</span>
+                  </li>
+                ))}
+              </ul>
+            </div>
+          </div>
+
+          <div className="mt-8">
+            <h3 className="text-xl font-semibold text-[#1c1f24]">Damen</h3>
+            <div className="mt-4 overflow-x-auto">
+              <table className="w-full text-left text-[#1c1f24]">
+                <thead>
+                  <tr className="text-sm uppercase tracking-wider text-[#a57c48]">
+                    <th className="pb-3 pr-4 font-medium">Leistung</th>
+                    <th className="pb-3 pr-4 text-right font-medium">Kurz</th>
+                    <th className="pb-3 text-right font-medium">Lang</th>
+                  </tr>
+                </thead>
+                <tbody className="text-base">
+                  {damenPreise.map((item) => (
+                    <tr key={item.service} className="border-t border-[#efe2d0]">
+                      <td className="py-3 pr-4">{item.service}</td>
+                      <td className="py-3 pr-4 text-right font-semibold">{item.kurz}</td>
+                      <td className="py-3 text-right font-semibold">{item.lang}</td>
+                    </tr>
+                  ))}
+                </tbody>
+              </table>
+            </div>
+          </div>
+        </section>
+
         <section id="kontakt" className="rounded-[32px] border border-[#efe2d0] bg-white p-10">
           <div className="grid gap-10 lg:grid-cols-2">
             <div>
@@ -306,7 +428,8 @@ export default function Home() {
 
       <footer className="mx-auto mt-16 w-full max-w-6xl px-6">
         <div className="rounded-[32px] border border-[#efe2d0] bg-white p-8 text-sm text-slate-600">
-          <p className="font-semibold text-[#1c1f24]">Haarstudio Pekesen · Inhaber Ali Pekesen</p>
+          <Image src="/images/logo.svg" alt="Logo Haarstudio Pekesen" width={180} height={90} className="mb-4" />
+          <p className="font-semibold text-[#1c1f24]">Inhaber Ali Pekesen</p>
           <p className="mt-2">
             Louisenstraße 19 · 61348 Bad Homburg v. d. Höhe · Telefon 06172 681466 · kontakt@haarstudio-pekesen.de
           </p>

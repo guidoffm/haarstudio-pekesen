@@ -1,3 +1,4 @@
+import Image from "next/image";
 import Link from "next/link";
 import type { Metadata } from "next";
 
@@ -17,11 +18,8 @@ export const metadata: Metadata = {
 export default function Impressum() {
   return (
     <div className="mx-auto max-w-3xl px-6 py-16">
-      <Link
-        href="/"
-        className="text-sm text-[#a57c48] underline underline-offset-4"
-      >
-        &larr; Zurück zur Startseite
+      <Link href="/">
+        <Image src="/images/logo.svg" alt="Logo Haarstudio Pekesen" width={200} height={100} />
       </Link>
 
       <h1 className="section-heading mt-8 text-4xl text-[#1c1f24]">
