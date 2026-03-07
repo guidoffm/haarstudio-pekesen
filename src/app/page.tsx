@@ -438,6 +438,7 @@ export default function Home() {
             <span>© {new Date().getFullYear()} Haarstudio Pekesen</span>
             <Link href="/impressum" className="underline hover:text-slate-700">Impressum</Link>
             <Link href="/datenschutz" className="underline hover:text-slate-700">Datenschutz</Link>
+            <span>Website von <Link href="https://www.altiros.de" target="_blank" rel="noreferrer" className="underline hover:text-slate-700">Altiros GmbH</Link></span>
           </div>
         </div>
       </footer>
