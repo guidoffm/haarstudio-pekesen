@@ -29,12 +29,8 @@ const highlights = [
 ];
 
 const heroImage = {
-  src: "/images/Haarstudio-Pekesen_316423fd282c58eecad1ab2eef972d09.jpg",
-  alt: "Modernes Haarstudio mit Spiegelwand und warmem Licht",
-  credit: "Pixabay",
-  creditUrl: "https://pixabay.com/",
-  license: "Pixabay License",
-  licenseUrl: "https://pixabay.com/service/license-summary/",
+  src: "/images/salon-styling-bereich.jpeg",
+  alt: "Styling-Bereich des Haarstudio Pekesen mit modernen Hexagon-Deckenleuchten und Friseursesseln",
 };
 
 const galleryImages = [
@@ -52,6 +48,21 @@ const galleryImages = [
     src: "/images/E6F74B7D-87F0-458C-827E-8052B61D100D_1_105_c.jpeg",
     alt: "Seitenansicht des Haarstudio Pekesen mit Blick in die historische Fußgängerzone Bad Homburg",
     caption: "Direkt in der historischen Innenstadt – umgeben von Cafés und Boutiquen.",
+  },
+  {
+    src: "/images/empfang-ueberblick.jpeg",
+    alt: "Empfangsbereich des Haarstudio Pekesen mit Rezeption, Farbpaletten und Orchidee",
+    caption: "Unser Empfangsbereich – hier werden Sie persönlich begrüßt.",
+  },
+  {
+    src: "/images/empfang-tresen.jpeg",
+    alt: "Rezeptionstresen des Haarstudio Pekesen mit Pflegeprodukten im Hintergrund",
+    caption: "Alles griffbereit – professionelle Produkte für Ihre Haarpflege.",
+  },
+  {
+    src: "/images/salon-styling-bereich-2.jpeg",
+    alt: "Geräumiger Styling-Bereich mit Friseursesseln und hexagonalen Deckenleuchten",
+    caption: "Großzügiger Styling-Bereich mit modernem Lichtkonzept.",
   },
 ];
 
@@ -130,13 +141,6 @@ export default function Home() {
               </div>
             </div>
           </div>
-          <p className="relative px-8 pb-6 text-xs text-white/70 lg:px-14">
-            Foto: <Link className="underline" href={heroImage.creditUrl} target="_blank" rel="noreferrer">{heroImage.credit}</Link> ({" "}
-            <Link className="underline" href={heroImage.licenseUrl} target="_blank" rel="noreferrer">
-              {heroImage.license}
-            </Link>
-            )
-          </p>
         </section>
       </header>
 
@@ -219,7 +223,7 @@ export default function Home() {
               </p>
             </div>
           </div>
-          <div className="mt-10 grid gap-6 md:grid-cols-2 lg:grid-cols-3">
+          <div className="mt-10 grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
             {galleryImages.map((image) => (
               <figure
                 key={image.src}

@@ -40,10 +40,14 @@ docker run -p 3000:3000 haarstudio-pekesen
 
 ## Bildnachweise
 
-Alle Fotos liegen in `public/images` und stammen von Pixabay (frei für kommerzielle Nutzung, keine Namensnennung erforderlich – [Pixabay License](https://pixabay.com/service/license-summary/)):
+Alle Fotos liegen in `public/images`.
 
-1. `Haarstudio-Pekesen_316423fd282c58eecad1ab2eef972d09.jpg` – <https://pixabay.com/>
-2. `ornaw-barbershop-4019683_1280.jpg` – <https://pixabay.com/photos/barbershop-salon-chairs-barbers-4019683/> (Fotograf: ornaw)
-3. `juanromanroman-hairdressing-952007_1280.jpg` – <https://pixabay.com/photos/hairdressing-salon-hairdresser-952007/> (Fotograf: juanromanroman)
-4. `mostafa_meraji-barber-6818730_1280.jpg` – <https://pixabay.com/photos/barber-barbershop-salon-hairdresser-6818730/> (Fotograf: mostafa_meraji)
-5. `pexels-awning-1840339_1280.jpg` – <https://pixabay.com/photos/awning-shop-stores-signboard-1840339/> (Fotograf: pexels)
+**Eigene Fotos des Salons:**
+
+- `salon-styling-bereich.jpeg` – Styling-Bereich mit Hexagon-Deckenleuchten (Hero-Image)
+- `salon-styling-bereich-2.jpeg` – Styling-Bereich, zweite Perspektive
+- `empfang-ueberblick.jpeg` – Empfangsbereich mit Rezeption
+- `empfang-tresen.jpeg` – Rezeptionstresen
+- `1B993822-…_1_105_c.jpeg` – Fassade Frontalansicht
+- `BD62660A-…_1_105_c.jpeg` – Außenansicht mit Schaufenstern
+- `E6F74B7D-…_1_105_c.jpeg` – Seitenansicht Fußgängerzone
