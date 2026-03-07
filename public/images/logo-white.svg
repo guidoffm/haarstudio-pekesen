@@ -4,11 +4,11 @@
   <path d="M455 40 C510 70, 530 130, 480 180" stroke="#c0392b" stroke-width="9" stroke-linecap="round" fill="none"/>
 
   <!-- HAARSTUDIO -->
-  <text x="30" y="68" text-anchor="start" font-family="sans-serif" font-size="24" font-weight="400" letter-spacing="14" fill="white">HAARSTUDIO</text>
+  <text x="20" y="68" text-anchor="start" font-family="sans-serif" font-size="24" font-weight="400" textLength="380" lengthAdjust="spacing" fill="white">HAARSTUDIO</text>
 
   <!-- PEKESEN -->
-  <text x="20" y="140" text-anchor="start" font-family="sans-serif" font-size="78" font-weight="800" fill="#c0392b">PEKESEN</text>
+  <text x="20" y="140" text-anchor="start" font-family="sans-serif" font-size="78" font-weight="800" textLength="380" lengthAdjust="spacing" fill="#c0392b">PEKESEN</text>
 
   <!-- DAMEN HERREN KINDER -->
-  <text x="20" y="175" text-anchor="start" font-family="sans-serif" font-size="19" font-weight="400" letter-spacing="9" fill="white">DAMEN  HERREN  KINDER</text>
+  <text x="20" y="175" text-anchor="start" font-family="sans-serif" font-size="19" font-weight="400" textLength="380" lengthAdjust="spacing" fill="white">DAMEN  HERREN  KINDER</text>
 </svg>
