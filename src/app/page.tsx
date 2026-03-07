@@ -311,9 +311,11 @@ export default function Home() {
             Louisenstraße 19 · 61348 Bad Homburg v. d. Höhe · Telefon 06172 681466 · kontakt@haarstudio-pekesen.de
           </p>
           <p className="mt-2">Instagram: @pekesen_haarstudio</p>
-          <p className="mt-4 text-xs text-slate-500">
-            © {new Date().getFullYear()} Haarstudio Pekesen. Alle Rechte vorbehalten.
-          </p>
+          <div className="mt-4 flex flex-wrap gap-4 text-xs text-slate-500">
+            <span>© {new Date().getFullYear()} Haarstudio Pekesen</span>
+            <Link href="/impressum" className="underline hover:text-slate-700">Impressum</Link>
+            <Link href="/datenschutz" className="underline hover:text-slate-700">Datenschutz</Link>
+          </div>
         </div>
       </footer>
     </div>

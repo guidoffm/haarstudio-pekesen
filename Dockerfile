@@ -4,7 +4,7 @@ WORKDIR /app
 COPY package.json package-lock.json ./
 RUN npm ci
 
-# Stage 2: Build the application
+# Stage 2: Build the static export
 FROM node:24-alpine AS builder
 WORKDIR /app
 
@@ -14,21 +14,11 @@ COPY . .
 ENV NEXT_TELEMETRY_DISABLED=1
 RUN npm run build
 
-# Stage 3: Production runner
-FROM dhi.io/node:24 AS runner
-WORKDIR /app
+# Stage 3: Serve static files with nginx
+FROM nginx:alpine AS runner
 
-ENV NODE_ENV=production
-ENV NEXT_TELEMETRY_DISABLED=1
+COPY --from=builder /app/out /usr/share/nginx/html
 
-COPY --from=builder /app/public ./public
+EXPOSE 80
 
-# Standalone output (server.js + minimal node_modules)
-COPY --from=builder /app/.next/standalone ./
-COPY --from=builder /app/.next/static ./.next/static
-
-EXPOSE 3000
-ENV PORT=3000
-ENV HOSTNAME="0.0.0.0"
-
-CMD ["node", "server.js"]
+CMD ["nginx", "-g", "daemon off;"]
