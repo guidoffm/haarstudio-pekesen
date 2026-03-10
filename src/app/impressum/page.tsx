@@ -59,16 +59,6 @@ export default function Impressum() {
 
         <section>
           <h2 className="text-xl font-semibold text-[#1c1f24]">
-            Umsatzsteuer-ID
-          </h2>
-          <p className="mt-2">
-            Umsatzsteuer-Identifikationsnummer gemäß § 27a
-            Umsatzsteuergesetz: [wird nachgetragen]
-          </p>
-        </section>
-
-        <section>
-          <h2 className="text-xl font-semibold text-[#1c1f24]">
             Berufsbezeichnung und berufsrechtliche Regelungen
           </h2>
           <p className="mt-2">
