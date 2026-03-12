@@ -13,7 +13,7 @@ const playfair = Playfair_Display({
 });
 
 export const metadata: Metadata = {
-  metadataBase: new URL("https://haarstudio-pekesen.de"),
+  metadataBase: new URL("https://pekesen-haarstudio.de"),
   title: "Haarstudio Pekesen | Friseur Bad Homburg",
   description:
     "Haarstudio Pekesen in Bad Homburg – exklusive Schnitte, Colorationen und Styling mit langen Öffnungszeiten und persönlichem Service.",
@@ -29,7 +29,7 @@ export const metadata: Metadata = {
     title: "Haarstudio Pekesen – Ihr exklusiver Friseur in Bad Homburg",
     description:
       "Besuchen Sie das Haarstudio Pekesen spontan oder vereinbaren Sie Ihren Wunschtermin. Montag bis Freitag von 08:00 bis 19:30 Uhr geöffnet.",
-    url: "https://haarstudio-pekesen.de",
+    url: "https://pekesen-haarstudio.de",
     siteName: "Haarstudio Pekesen",
     locale: "de_DE",
     type: "website",
@@ -43,7 +43,7 @@ export const metadata: Metadata = {
     ],
   },
   alternates: {
-    canonical: "https://haarstudio-pekesen.de",
+    canonical: "https://pekesen-haarstudio.de",
   },
 };
 
@@ -51,9 +51,9 @@ const jsonLd = {
   "@context": "https://schema.org",
   "@type": "HairSalon",
   name: "Haarstudio Pekesen",
-  url: "https://haarstudio-pekesen.de",
+  url: "https://pekesen-haarstudio.de",
   telephone: "+496172681466",
-  email: "kontakt@haarstudio-pekesen.de",
+  email: "kontakt@pekesen-haarstudio.de",
   address: {
     "@type": "PostalAddress",
     streetAddress: "Louisenstraße 19",
@@ -82,7 +82,7 @@ const jsonLd = {
   ],
   sameAs: ["https://www.instagram.com/pekesen_haarstudio/"],
   image:
-    "https://haarstudio-pekesen.de/images/1B993822-9FB4-4829-B9F7-1F06B06CFE1B_1_105_c.jpeg",
+    "https://pekesen-haarstudio.de/images/1B993822-9FB4-4829-B9F7-1F06B06CFE1B_1_105_c.jpeg",
 };
 
 export default function RootLayout({

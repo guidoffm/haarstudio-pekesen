@@ -7,7 +7,7 @@ export const metadata: Metadata = {
   description:
     "Datenschutzerklärung des Haarstudio Pekesen – Informationen zur Datenverarbeitung gemäß DSGVO.",
   alternates: {
-    canonical: "https://haarstudio-pekesen.de/datenschutz",
+    canonical: "https://pekesen-haarstudio.de/datenschutz",
   },
   robots: {
     index: true,
@@ -61,8 +61,8 @@ export default function Datenschutz() {
             </Link>
             <br />
             E-Mail:{" "}
-            <Link href="mailto:kontakt@haarstudio-pekesen.de" className="underline">
-              kontakt@haarstudio-pekesen.de
+            <Link href="mailto:kontakt@pekesen-haarstudio.de" className="underline">
+              kontakt@pekesen-haarstudio.de
             </Link>
           </p>
         </section>

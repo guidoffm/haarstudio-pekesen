@@ -175,10 +175,10 @@ export default function Home() {
                 </Link>
                 <p className="mt-4 text-sm text-slate-200">E-Mail</p>
                 <Link
-                  href="mailto:kontakt@haarstudio-pekesen.de"
+                  href="mailto:kontakt@pekesen-haarstudio.de"
                   className="mt-1 inline-flex items-center gap-2 text-white"
                 >
-                  kontakt@haarstudio-pekesen.de
+                  kontakt@pekesen-haarstudio.de
                 </Link>
               </div>
             </div>
@@ -234,10 +234,10 @@ export default function Home() {
                 06172 681466<span className="text-sm font-normal text-[#a57c48]">Jetzt anrufen</span>
               </Link>
               <Link
-                href="mailto:kontakt@haarstudio-pekesen.de"
+                href="mailto:kontakt@pekesen-haarstudio.de"
                 className="flex items-center justify-between rounded-2xl border border-[#f2d7b5] px-5 py-4 text-lg text-[#1c1f24] transition hover:bg-[#fdf7f0]"
               >
-                kontakt@haarstudio-pekesen.de<span className="text-sm font-normal text-[#a57c48]">Mail senden</span>
+                kontakt@pekesen-haarstudio.de<span className="text-sm font-normal text-[#a57c48]">Mail senden</span>
               </Link>
             </div>
             <Link
@@ -445,7 +445,7 @@ export default function Home() {
           <Image src="/images/logo.svg" alt="Logo Haarstudio Pekesen" width={180} height={90} className="mb-4" />
           <p className="font-semibold text-[#1c1f24]">Inhaber Ali Pekesen</p>
           <p className="mt-2">
-            Louisenstraße 19 · 61348 Bad Homburg v. d. Höhe · Telefon 06172 681466 · kontakt@haarstudio-pekesen.de
+            Louisenstraße 19 · 61348 Bad Homburg v. d. Höhe · Telefon 06172 681466 · kontakt@pekesen-haarstudio.de
           </p>
           <p className="mt-2">Instagram: @pekesen_haarstudio</p>
           <div className="mt-4 flex flex-wrap gap-4 text-xs text-slate-500">

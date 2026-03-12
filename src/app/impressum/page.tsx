@@ -7,7 +7,7 @@ export const metadata: Metadata = {
   description:
     "Impressum des Haarstudio Pekesen – Inhaber Ali Pekesen, Louisenstraße 19, 61348 Bad Homburg v. d. Höhe.",
   alternates: {
-    canonical: "https://haarstudio-pekesen.de/impressum",
+    canonical: "https://pekesen-haarstudio.de/impressum",
   },
   robots: {
     index: true,
@@ -51,8 +51,8 @@ export default function Impressum() {
             </Link>
             <br />
             E-Mail:{" "}
-            <Link href="mailto:kontakt@haarstudio-pekesen.de" className="underline">
-              kontakt@haarstudio-pekesen.de
+            <Link href="mailto:kontakt@pekesen-haarstudio.de" className="underline">
+              kontakt@pekesen-haarstudio.de
             </Link>
           </p>
         </section>
