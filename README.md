@@ -7,9 +7,8 @@ Moderne Onepage-Präsenz für das Haarstudio Pekesen in Bad Homburg. Die Seite w
 - Hochwertiges Layout mit Playfair Display & Manrope
 - Alle Stammdaten, Öffnungszeiten und CTA-Elemente
 - Instagram-Verlinkung & Google-Maps-Routenlink
-- Dockerfile für ein produktionsreifes OCI-Image (Next.js Standalone)
-- GitHub Action zum Bauen und Veröffentlichen des Images nach GHCR
-- Bildgalerie mit Creative-Commons-Lizenzen
+- Dockerfile für ein produktionsreifes OCI-Image (Static Export via nginx)
+- Bildgalerie mit eigenen Salon-Fotos
 
 ## Entwicklung
 
@@ -31,12 +30,18 @@ npm run build
 
 ```bash
 docker build -t haarstudio-pekesen .
-docker run -p 3000:3000 haarstudio-pekesen
+docker run -p 8080:80 haarstudio-pekesen
 ```
 
-## GitHub Action
+Die Seite ist dann unter <http://localhost:8080> erreichbar.
 
-`.github/workflows/build.yml` baut das Docker-Image bei jedem Push nach `main` und veröffentlicht es als `ghcr.io/<owner>/<repo>:<tag>`.
+## Multi-Arch Image bauen & pushen
+
+```bash
+./docker-build.sh
+```
+
+Baut und pusht ein `linux/amd64` + `linux/arm64` Image nach `ghcr.io/guidoffm/haarstudio-pekesen`.
 
 ## Bildnachweise
 
