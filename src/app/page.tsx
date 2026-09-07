@@ -2,11 +2,11 @@ import Image from "next/image";
 import Link from "next/link";
 
 const hours = [
-  { day: "Montag", time: "08:00 - 19:00" },
-  { day: "Dienstag", time: "08:00 - 19:00" },
-  { day: "Mittwoch", time: "08:00 - 19:00" },
-  { day: "Donnerstag", time: "08:00 - 19:00" },
-  { day: "Freitag", time: "08:00 - 19:00" },
+  { day: "Montag", time: "08:00 - 18:15" },
+  { day: "Dienstag", time: "08:00 - 18:15" },
+  { day: "Mittwoch", time: "08:00 - 18:15" },
+  { day: "Donnerstag", time: "08:00 - 18:15" },
+  { day: "Freitag", time: "08:00 - 18:15" },
   { day: "Samstag", time: "08:00 - 18:00" },
 ];
 
@@ -24,7 +24,7 @@ const highlights = [
   {
     title: "Lange Öffnungszeiten",
     copy:
-      "Montag bis Freitag bis 19:00 Uhr – perfekt für alle, die sich nach der Arbeit Zeit für sich nehmen möchten.",
+      "Montag bis Freitag bis 18:15 Uhr – perfekt für alle, die sich nach der Arbeit Zeit für sich nehmen möchten.",
   },
 ];
 
@@ -392,7 +392,7 @@ export default function Home() {
                 Immer für Sie da – auch nach Feierabend
               </h2>
               <p className="mt-4 text-lg text-slate-700">
-                Montag bis Freitag sind wir bis 19:00 Uhr für Sie da. Starten Sie entspannt in den Abend – wir kümmern uns um den perfekten Look.
+                Montag bis Freitag sind wir bis 18:15 Uhr für Sie da. Starten Sie entspannt in den Abend – wir kümmern uns um den perfekten Look.
               </p>
               <ul className="mt-6 space-y-3">
                 {hours.map((hour) => (

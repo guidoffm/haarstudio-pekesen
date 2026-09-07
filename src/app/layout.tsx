@@ -28,7 +28,7 @@ export const metadata: Metadata = {
   openGraph: {
     title: "Haarstudio Pekesen – Ihr exklusiver Friseur in Bad Homburg",
     description:
-      "Besuchen Sie das Haarstudio Pekesen spontan oder vereinbaren Sie Ihren Wunschtermin. Montag bis Freitag von 08:00 bis 19:30 Uhr geöffnet.",
+      "Besuchen Sie das Haarstudio Pekesen spontan oder vereinbaren Sie Ihren Wunschtermin. Montag bis Freitag von 08:00 bis 18:15 Uhr geöffnet.",
     url: "https://pekesen-haarstudio.de",
     siteName: "Haarstudio Pekesen",
     locale: "de_DE",
@@ -71,7 +71,7 @@ const jsonLd = {
       "@type": "OpeningHoursSpecification",
       dayOfWeek: ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday"],
       opens: "08:00",
-      closes: "19:00",
+      closes: "18:15",
     },
     {
       "@type": "OpeningHoursSpecification",
